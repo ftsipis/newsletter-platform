@@ -1,0 +1,4 @@
+@startuml architecture
+Alice -> Bob: Hello
+Bob --> Alice: Hi
+@enduml
