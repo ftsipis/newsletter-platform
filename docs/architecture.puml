@@ -1,4 +1,42 @@
 @startuml architecture
-Alice -> Bob: Hello
-Bob --> Alice: Hi
+package "Frontend" #LightSkyBlue{
+    #IndianRed[**Next.js**\n**Structure & Routing**] as f1
+    #IndianRed[**TailwindCSS**\n**Styling**] as f2
+    #IndianRed[**JavaScript**\n**Interctivity & Logic**] as f3
+    #IndianRed[**JavaScript**\n**Data Communication (API Calls)**] as f4
+    #IndianRed[**Vercel**\n**Deployment**] as f5
+
+    f1 -[hidden]- f2
+    f2 -[hidden]- f3
+    f3 -[hidden]- f4
+    f4 -[hidden]- f5
+}
+
+package "Backend" #DarkBlue{
+    #LightPink[**JavaScript**\n**Set up the backend environment**] as b1
+    #LightPink[**JavaScript/TypeScript**\n**Define API endpoints**] as b2
+    #LightPink[**JavaScript**\n**Connect to the database**] as b3
+    #LightPink[**JavaScript**\n**Implement basic validation**] as b4  
+    #LightPink[**Supabase Auth or simple JWT logic (JavaScript)**\n**Add admin authentication**] as b5
+    #LightPink[**JavaScript**\n**Implement email sending**] as b6
+    #LightPink[**JavaScript**\n**Test your routes**] as b7
+    #LightPink[**Vercel**\n**Deploy backend together with frontend**] as b8 
+
+    b1 -[hidden]- b2
+    b2 -[hidden]- b3
+    b3 -[hidden]- b4
+    b4 -[hidden]- b5
+    b5 -[hidden]- b6
+    b6 -[hidden]- b7
+    b7 -[hidden]- b8
+}
+
+package "Database" #LightSkyBlue{
+    #IndianRed[**Store Newsletter Post**] as d1
+    #IndianRed[**Store Subscribers (emails)**] as d2
+    #IndianRed[**Store admin data, analytics, etc.**] as d3
+
+    d1 -[hidden]- d2
+    d2 -[hidden]- d3
+}
 @enduml
