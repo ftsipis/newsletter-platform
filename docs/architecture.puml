@@ -1,4 +1,4 @@
-@startuml architecture
+@startuml
 package "Frontend" #LightSkyBlue{
     #IndianRed[**Next.js**\n**Structure & Routing**] as f1
     #IndianRed[**TailwindCSS**\n**Styling**] as f2
